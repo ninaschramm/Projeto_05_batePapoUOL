@@ -50,12 +50,14 @@ body {
 .msgs_scroll {
     margin: 100px 0 80px 0;
     height: 100%;
+    max-width: 375px;
     background-color: #E5E5E5;
     
 }
 
 .msg {
     width: 100%;
+    max-width: 375px;
     height: fit-content;
     font-family: 'Roboto';
     font-style: normal;
@@ -88,9 +90,109 @@ body {
     width: 300px;
     height: 32px;
     border: 0px;
-    font-style: italic;
 }
 
 .bottom ion-icon {
     font-size: 24px;
+}
+
+button {
+    border: 0px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.bottom ::placeholder {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.participants {
+    width: 100%;
+    height: 100%;
+    max-width: 375px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;    
+    transition: all 2s;
+    justify-content: right;
+}
+
+.bg {
+    width: 125px;
+    height: 100%;    
+    background-color: black;
+    opacity: .4;
+    z-index: 2;
+}
+
+.pList {
+    width: 250px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;    
+    opacity: 1;
+    z-index: 2;    
+    transition: all 2s;
+}
+
+.escolha {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;    
+    font-size: 16px;
+    line-height: 19px;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.participant {
+    height: 200px;
+    width: 194px;
+    overflow-y: scroll;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.privacidade {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: left;
+    width: 200px;
+}
+
+.privacidade div {
+    margin-bottom: 8px;
+}
+
+.pOn {
+    margin-top: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+.sizeAdjust {
+    width: 0;
+}
+
+.selected {
+    background-color: green;
+}
+
+.enviando {
+    font-weight: 400;
+    font-size: 12px;
+    color: gray;
 }

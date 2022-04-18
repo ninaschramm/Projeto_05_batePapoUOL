@@ -13,20 +13,44 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <div class="container">
+
+        <div class="entrada hidden">
+            <img src="arq/batepapologo.jpg">
+            <input id="enterInput" type="text" placeholder="Digite seu nome">
+            <button class="enterBtn">Entrar</button>
+        </div>
+
+        <div class="participants hidden">
+            <div class="bg"></div>
+            <div class="pList sizeAdjust">
+                <div class="escolha">Escolha um contato para enviar mensagem: </div>
+                   <div class="participant">
+                        </div>
+                
+                <div class="escolha">Escolha a visibilidade:</div>
+                <div class="privacidade"> 
+                <div class="publico" onclick="selPriv(this)" id="tgPublic"><ion-icon name="lock-open"></ion-icon> Público</div>
+                <div class="reservado" onclick="selPriv(this)" id="tgPrivate"><ion-icon name="lock-closed"></ion-icon> Reservadamente</div></div>
+                <button class="ok" onclick="viewParticipants()">OK!</button>
+            </div>
+
+        </div>
 <div class="top">
 <div class="logo"><img src="arq/batepapologo.jpg" /></div>
-<div class="icon_user"><ion-icon name="people"></ion-icon></div>
+<button class="icon_user" onclick="viewParticipants()"><ion-icon name="people"></ion-icon></button>
 </div>
 <div class="msgs_scroll">
-<div class="msg msg_private_message">
-    <time>(09:22:48) </time> <span>João </span> reservadamente para <span>Maria: </span>  Oi gatinha quer tc? Deixa eu ver o que acontece com mensagens muito mais longas pra ver se esse display flex será necessário
-</div>
+
 </div>
 
 <div class="bottom">
-    <div class="textbox"><input id="textInput" value="Escreve aí..."> </div>
-    <div class="icon_send"><ion-icon name="paper-plane-outline"></ion-icon></div>
+    <div><div class="textbox"><input id="textInput" placeholder="Escreve aí..."> </div>
+<div class="enviando"></div>
+</div>
+    
+    <button class="icon_send" onclick="sendMsg()"><ion-icon name="paper-plane-outline"></ion-icon></button>
 </div>
     </div>
     
